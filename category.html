@@ -1,12 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./jun-11/css/category.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casual — SHOP.CO</title>
+  <meta name="description" content="Browse casual clothing at SHOP.CO — t-shirts, shirts, jeans and shorts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/category.css">
 </head>
 <body>
-    
+
+  <!-- ============ PROMO BANNER ============ -->
+  <div class="promo" id="promo">
+    <div class="container promo__inner">
+      <p class="promo__text">
+        Sign up and get 20% off to your first order.
+        <a href="#newsletter">Sign Up Now</a>
+      </p>
+      <button class="promo__close" id="promoClose" aria-label="Close banner">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container header__inner">
+      <button class="icon-btn header__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <a href="./index.html" class="logo">SHOP.CO</a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul class="nav__list">
+          <li class="nav__item has-drop">
+            <button class="nav__link" aria-expanded="false">
+              Shop
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <ul class="nav__drop">
+              <li><a href="#">Men's Clothing</a></li>
+              <li><a href="#">Women's Clothing</a></li>
+              <li><a href="#">Kids</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="#">On Sale</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">New Arrivals</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Brands</a></li>
+        </ul>
+      </nav>
+
+      <form class="search" role="search" onsubmit="return false;">
+        <svg class="search__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7" fill="none"/>
+          <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+        <input type="search" id="search" placeholder="Search for products..." aria-label="Search for products">
+      </form>
+
+      <div class="header__actions">
+        <button class="icon-btn header__search-toggle" id="searchToggle" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7" fill="none"/>
+            <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <a class="icon-btn cart-btn" href="./cart.html" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true">
+            <path d="M4 6h2l2.2 10.2a2 2 0 002 1.6h7.3a2 2 0 002-1.55L21 9H7"
+                  stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="20" r="1.3" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1.3" fill="currentColor"/>
+          </svg>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </a>
+        <a class="icon-btn" href="#" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true">
+            <circle cx="12" cy="9" r="3.4" stroke="currentColor" stroke-width="1.6" fill="none"/>
+            <path d="M4.5 20a7.5 7.5 0 0115 0" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <form class="search search--mobile" id="mobileSearch" role="search" onsubmit="return false;">
+      <svg class="search__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7" fill="none"/>
+        <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      </svg>
+      <input type="search" placeholder="Search for products..." aria-label="Search for products">
+    </form>
+  </header>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <!-- ============ MAIN ============ -->
+  <main class="container page">
+
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="./index.html">Home</a>
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span aria-current="page">Casual</span>
+    </nav>
+
+    <div class="layout">
+
+      <!-- ---------- FILTERS ---------- -->
+      <aside class="filters" id="filters" aria-label="Filters">
+        <div class="filters__head">
+          <h2 class="filters__title">Filters</h2>
+          <button class="icon-btn filters__close" id="filtersClose" aria-label="Close filters">
+            <svg class="filters__glyph" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M4 7h10M18 7h2M4 12h4M12 12h8M4 17h12M20 17h0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="16" cy="7" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+              <circle cx="10" cy="12" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+              <circle cx="18" cy="17" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+            </svg>
+            <svg class="filters__x" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="cat-list" id="catList">
+          <li><button type="button" data-cat="T-shirts">T-shirts <span class="chev"></span></button></li>
+          <li><button type="button" data-cat="Shorts">Shorts <span class="chev"></span></button></li>
+          <li><button type="button" data-cat="Shirts">Shirts <span class="chev"></span></button></li>
+          <li><button type="button" data-cat="Hoodie">Hoodie <span class="chev"></span></button></li>
+          <li><button type="button" data-cat="Jeans">Jeans <span class="chev"></span></button></li>
+        </ul>
+
+        <!-- Price -->
+        <section class="acc is-open" data-acc>
+          <button class="acc__head" type="button" aria-expanded="true">
+            <span>Price</span><span class="acc__chev"></span>
+          </button>
+          <div class="acc__body">
+            <div class="range" id="range">
+              <div class="range__track"><div class="range__fill" id="rangeFill"></div></div>
+              <input type="range" id="priceMin" min="0" max="500" step="5" value="50" aria-label="Minimum price">
+              <input type="range" id="priceMax" min="0" max="500" step="5" value="200" aria-label="Maximum price">
+            </div>
+            <div class="range__labels">
+              <span id="priceMinLabel">$50</span>
+              <span id="priceMaxLabel">$200</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Colors -->
+        <section class="acc is-open" data-acc>
+          <button class="acc__head" type="button" aria-expanded="true">
+            <span>Colors</span><span class="acc__chev"></span>
+          </button>
+          <div class="acc__body">
+            <div class="swatches" id="swatches">
+              <button type="button" class="swatch" style="--c:#00C12B" data-color="green" aria-label="Green"></button>
+              <button type="button" class="swatch" style="--c:#F50606" data-color="red" aria-label="Red"></button>
+              <button type="button" class="swatch" style="--c:#F5DD06" data-color="yellow" aria-label="Yellow"></button>
+              <button type="button" class="swatch" style="--c:#F57906" data-color="orange" aria-label="Orange"></button>
+              <button type="button" class="swatch" style="--c:#06CAF5" data-color="cyan" aria-label="Cyan"></button>
+              <button type="button" class="swatch is-active" style="--c:#063AF5" data-color="blue" aria-label="Blue"></button>
+              <button type="button" class="swatch" style="--c:#7D06F5" data-color="purple" aria-label="Purple"></button>
+              <button type="button" class="swatch" style="--c:#F506A4" data-color="pink" aria-label="Pink"></button>
+              <button type="button" class="swatch swatch--light" style="--c:#FFFFFF" data-color="white" aria-label="White"></button>
+              <button type="button" class="swatch" style="--c:#000000" data-color="black" aria-label="Black"></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Size -->
+        <section class="acc is-open" data-acc>
+          <button class="acc__head" type="button" aria-expanded="true">
+            <span>Size</span><span class="acc__chev"></span>
+          </button>
+          <div class="acc__body">
+            <div class="sizes" id="sizes">
+              <button type="button" class="pill">XX-Small</button>
+              <button type="button" class="pill">X-Small</button>
+              <button type="button" class="pill">Small</button>
+              <button type="button" class="pill">Medium</button>
+              <button type="button" class="pill is-active">Large</button>
+              <button type="button" class="pill">X-Large</button>
+              <button type="button" class="pill">XX-Large</button>
+              <button type="button" class="pill">3X-Large</button>
+              <button type="button" class="pill">4X-Large</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dress style -->
+        <section class="acc is-open" data-acc>
+          <button class="acc__head" type="button" aria-expanded="true">
+            <span>Dress Style</span><span class="acc__chev"></span>
+          </button>
+          <div class="acc__body">
+            <ul class="cat-list cat-list--flush" id="styleList">
+              <li><button type="button" class="is-active" data-style="Casual">Casual <span class="chev"></span></button></li>
+              <li><button type="button" data-style="Formal">Formal <span class="chev"></span></button></li>
+              <li><button type="button" data-style="Party">Party <span class="chev"></span></button></li>
+              <li><button type="button" data-style="Gym">Gym <span class="chev"></span></button></li>
+            </ul>
+          </div>
+        </section>
+
+        <button class="btn btn--block" id="applyFilter" type="button">Apply Filter</button>
+      </aside>
+
+      <!-- ---------- PRODUCTS ---------- -->
+      <section class="results">
+        <div class="results__head">
+          <h1 class="results__title" id="categoryTitle">Casual</h1>
+          <div class="results__meta">
+            <span class="results__count" id="resultsCount">Showing 1-9 of 90 Products</span>
+            <div class="sort">
+              <span class="sort__label">Sort by:</span>
+              <div class="select" id="sortSelect">
+                <button class="select__btn" type="button" aria-expanded="false" aria-haspopup="listbox">
+                  <span id="sortValue">Most Popular</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                  </svg>
+                </button>
+                <ul class="select__menu" role="listbox">
+                  <li role="option" data-sort="popular" class="is-selected">Most Popular</li>
+                  <li role="option" data-sort="new">Newest</li>
+                  <li role="option" data-sort="low">Price: Low to High</li>
+                  <li role="option" data-sort="high">Price: High to Low</li>
+                  <li role="option" data-sort="rating">Best Rating</li>
+                </ul>
+              </div>
+            </div>
+            <button class="icon-btn results__filter-btn" id="filtersOpen" aria-label="Open filters">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M4 7h10M18 7h2M4 12h4M12 12h8M4 17h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <circle cx="16" cy="7" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+                <circle cx="10" cy="12" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+                <circle cx="18" cy="17" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="grid" id="grid"><!-- products injected by category.js --></div>
+
+        <p class="empty" id="empty" hidden>No products match your filters. Try widening the price range.</p>
+
+        <nav class="pager" id="pager" aria-label="Pagination"></nav>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <div class="newsletter__box">
+        <h2 class="newsletter__title">Stay upto date about<br>our latest offers</h2>
+        <form class="newsletter__form" id="newsletterForm" novalidate>
+          <label class="field">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <rect x="3" y="5.5" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </svg>
+            <input type="email" id="newsletterEmail" placeholder="Enter your email address" aria-label="Email address" required>
+          </label>
+          <button class="btn btn--white" type="submit">Subscribe to Newsletter</button>
+          <p class="newsletter__msg" id="newsletterMsg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="./index.html" class="logo">SHOP.CO</a>
+        <p class="footer__about">We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+        <div class="socials">
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.4-1.3 1.7-2.2-.8.5-1.6.8-2.5 1a3.9 3.9 0 00-6.7 3.5A11 11 0 013.2 4.6a3.9 3.9 0 001.2 5.2c-.6 0-1.2-.2-1.7-.5a3.9 3.9 0 003.1 3.8c-.5.2-1.1.2-1.7.1a3.9 3.9 0 003.6 2.7A7.8 7.8 0 012 17.5a11 11 0 005.9 1.7c7.1 0 11.1-6 11.1-11.2v-.5c.8-.6 1.4-1.3 2-2.1z"/></svg>
+          </a>
+          <a href="#" class="socials__fb" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.45-4 4.1v2.3H7.6V13h2.7v8h3.2z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.7" fill="none"/>
+              <circle cx="12" cy="12" r="3.7" stroke="currentColor" stroke-width="1.7" fill="none"/>
+              <circle cx="17" cy="7" r="1.2" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.7-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3>Company</h3>
+          <ul><li><a href="#">About</a></li><li><a href="#">Features</a></li><li><a href="#">Works</a></li><li><a href="#">Career</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h3>Help</h3>
+          <ul><li><a href="#">Customer Support</a></li><li><a href="#">Delivery Details</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Privacy Policy</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h3>FAQ</h3>
+          <ul><li><a href="#">Account</a></li><li><a href="#">Manage Deliveries</a></li><li><a href="#">Orders</a></li><li><a href="#">Payments</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h3>Resources</h3>
+          <ul><li><a href="#">Free eBooks</a></li><li><a href="#">Development Tutorial</a></li><li><a href="#">How to - Blog</a></li><li><a href="#">Youtube Playlist</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>Shop.co © 2000-2023, All Rights Reserved</p>
+      <div class="pay">
+        <span class="pay__card">VISA</span>
+        <span class="pay__card pay__card--mc"><i></i><i></i></span>
+        <span class="pay__card">PayPal</span>
+        <span class="pay__card">&#63743;Pay</span>
+        <span class="pay__card">G Pay</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/category.js"></script>
 </body>
 </html>
