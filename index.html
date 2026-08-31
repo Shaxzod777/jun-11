@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOP.CO — Find Clothes That Matches Your Style</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- Announcement bar -->
+  <div class="announcement">
+    <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
+    <button class="announcement__close" aria-label="Close announcement">&times;</button>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#" class="logo">SHOP.CO</a>
+
+      <nav class="main-nav">
+        <ul>
+          <li class="has-dropdown"><a href="#">Shop <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#">On Sale</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Brands</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#666" stroke-width="2"/><path d="M21 21L16.65 16.65" stroke="#666" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" placeholder="Search for products...">
+      </div>
+
+      <div class="header-icons">
+        <button class="icon-btn search-icon-mobile" aria-label="Search">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#000" stroke-width="2"/><path d="M21 21L16.65 16.65" stroke="#000" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6H21L19 15H8L6 6ZM6 6L5 3H2" stroke="#000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.3" fill="#000"/><circle cx="18" cy="20" r="1.3" fill="#000"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#000" stroke-width="1.8"/><path d="M4 20C4 16.6863 7.58172 14 12 14C16.4183 14 20 16.6863 20 20" stroke="#000" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1>FIND CLOTHES<br>THAT MATCHES<br>YOUR STYLE</h1>
+          <p class="hero__desc">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+          <a href="#new-arrivals" class="btn btn--primary">Shop Now</a>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__num">200+</span>
+              <span class="stat__label">International Brands</span>
+            </div>
+            <div class="stat stat--divider">
+              <span class="stat__num">2,000+</span>
+              <span class="stat__label">High-Quality Products</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">30,000+</span>
+              <span class="stat__label">Happy Customers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__image">
+          <img src="https://placehold.co/600x650/f2f0f1/2b2b2b?text=Hero+Models" alt="Models wearing featured styles">
+          <svg class="spark spark--big" viewBox="0 0 60 60" fill="#000"><path d="M30 0C31 15 35 29 60 30C35 31 31 45 30 60C29 45 25 31 0 30C25 29 29 15 30 0Z"/></svg>
+          <svg class="spark spark--small" viewBox="0 0 60 60" fill="#000"><path d="M30 0C31 15 35 29 60 30C35 31 31 45 30 60C29 45 25 31 0 30C25 29 29 15 30 0Z"/></svg>
+        </div>
+      </div>
+
+      <div class="brand-strip">
+        <div class="container brand-strip__inner">
+          <span>VERSACE</span>
+          <span>ZARA</span>
+          <span>GUCCI</span>
+          <span class="brand-strip__hero">PRADA</span>
+          <span>Calvin Klein</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="product-section" id="new-arrivals">
+      <div class="container">
+        <h2 class="section-title">NEW ARRIVALS</h2>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__img"><img src="https://placehold.co/400x400/f0eeed/999999?text=T-Shirt" alt="T-shirt with Tape Details"></div>
+            <h3>T-shirt with Tape Details</h3>
+            <div class="rating"><span class="stars">★★★★☆</span><span class="rating__num">4.5/5</span></div>
+            <div class="price"><span class="price__current">$120</span></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__img"><img src="https://placehold.co/400x400/f0eeed/999999?text=Jeans" alt="Skinny Fit Jeans"></div>
+            <h3>Skinny Fit Jeans</h3>
+            <div class="rating"><span class="stars">★★★☆☆</span><span class="rating__num">3.5/5</span></div>
+            <div class="price"><span class="price__current">$240</span><span class="price__old">$260</span><span class="price__badge">-20%</span></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__img"><img src="https://placehold.co/400x400/f0eeed/999999?text=Shirt" alt="Checkered Shirt"></div>
+            <h3>Checkered Shirt</h3>
+            <div class="rating"><span class="stars">★★★★☆</span><span class="rating__num">4.5/5</span></div>
+            <div class="price"><span class="price__current">$180</span></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__img"><img src="https://placehold.co/400x400/f0eeed/999999?text=T-Shirt" alt="Sleeve Striped T-shirt"></div>
+            <h3>Sleeve Striped T-shirt</h3>
+            <div class="rating"><span class="stars">★★★★☆</span><span class="rating__num">4.5/5</span></div>
+            <div class="price"><span class="price__current">$130</span><span class="price__old">$160</span><span class="price__badge">-30%</span></div>
+          </article>
+
+        </div>
+        <div class="view-all-wrap">
+          <a href="#" class="btn btn--outline">View All</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Top Selling -->
+    <section class="product-section">
+      <div class="container">
+        <h2 class="section-title">TOP SELLING</h2>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__img"><img src="https://placehold.co/400x400/f0eeed/999999?text=Shirt" alt="Vertical Striped Shirt"></div>
+            <h3>Vertical Striped Shirt</h3>
+            <div class="rating"><span class="stars">★★★★★</span><span class="rating__num">5.0/5</span></div>
+            <div class="price"><span class="price__current">$212</span><span class="price__old">$232</span><span class="price__badge">-20%</span></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__img"><img src="https://placehold.co/400x400/f0eeed/999999?text=T-Shirt" alt="Courage Graphic T-shirt"></div>
+            <h3>Courage Graphic T-shirt</h3>
+            <div class="rating"><span class="stars">★★★★☆</span><span class="rating__num">4.0/5</span></div>
+            <div class="price"><span class="price__current">$145</span></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__img"><img src="https://placehold.co/400x400/f0eeed/999999?text=Shorts" alt="Loose Fit Bermuda Shorts"></div>
+            <h3>Loose Fit Bermuda Shorts</h3>
+            <div class="rating"><span class="stars">★★★☆☆</span><span class="rating__num">3.0/5</span></div>
+            <div class="price"><span class="price__current">$80</span></div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__img"><img src="https://placehold.co/400x400/f0eeed/999999?text=Jeans" alt="Faded Skinny Jeans"></div>
+            <h3>Faded Skinny Jeans</h3>
+            <div class="rating"><span class="stars">★★★★☆</span><span class="rating__num">4.5/5</span></div>
+            <div class="price"><span class="price__current">$210</span></div>
+          </article>
+
+        </div>
+        <div class="view-all-wrap">
+          <a href="#" class="btn btn--outline">View All</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by Dress Style -->
+    <section class="dress-style">
+      <div class="container">
+        <div class="dress-style__panel">
+          <h2 class="section-title">BROWSE BY DRESS STYLE</h2>
+          <div class="dress-style__grid">
+            <a href="#" class="style-card style-card--casual">
+              <span>Casual</span>
+              <img src="https://placehold.co/500x300/e9e7e6/999999?text=Casual" alt="Casual style">
+            </a>
+            <a href="#" class="style-card style-card--formal">
+              <span>Formal</span>
+              <img src="https://placehold.co/500x300/e9e7e6/999999?text=Formal" alt="Formal style">
+            </a>
+            <a href="#" class="style-card style-card--party">
+              <span>Party</span>
+              <img src="https://placehold.co/700x350/e9e7e6/999999?text=Party" alt="Party style">
+            </a>
+            <a href="#" class="style-card style-card--gym">
+              <span>Gym</span>
+              <img src="https://placehold.co/700x350/e9e7e6/999999?text=Gym" alt="Gym style">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="testimonials__head">
+          <h2 class="section-title section-title--left">OUR HAPPY CUSTOMERS</h2>
+          <div class="testimonials__arrows">
+            <button aria-label="Previous testimonial">&larr;</button>
+            <button aria-label="Next testimonial">&rarr;</button>
+          </div>
+        </div>
+
+        <div class="testimonials__track">
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <h3>Sarah M. <svg width="14" height="14" viewBox="0 0 24 24" fill="#00C853"><circle cx="12" cy="12" r="12"/><path d="M8 12.5L11 15.5L16 9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></h3>
+            <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."</p>
+          </article>
+
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <h3>Alex K. <svg width="14" height="14" viewBox="0 0 24 24" fill="#00C853"><circle cx="12" cy="12" r="12"/><path d="M8 12.5L11 15.5L16 9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></h3>
+            <p>"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."</p>
+          </article>
+
+          <article class="testimonial-card">
+            <span class="stars">★★★★★</span>
+            <h3>James L. <svg width="14" height="14" viewBox="0 0 24 24" fill="#00C853"><circle cx="12" cy="12" r="12"/><path d="M8 12.5L11 15.5L16 9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></h3>
+            <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container newsletter__inner">
+        <h2>STAY UPTO DATE ABOUT<br>OUR LATEST OFFERS</h2>
+        <form class="newsletter__form" onsubmit="return false;">
+          <div class="newsletter__input">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="#666" stroke-width="1.6"/><path d="M3 6L12 13L21 6" stroke="#666" stroke-width="1.6"/></svg>
+            <input type="email" placeholder="Enter your email address" required>
+          </div>
+          <button type="submit" class="btn btn--light">Subscribe to Newsletter</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="logo">SHOP.CO</a>
+        <p>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="GitHub">◐</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Works</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>HELP</h4>
+        <ul>
+          <li><a href="#">Customer Support</a></li>
+          <li><a href="#">Delivery Details</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>FAQ</h4>
+        <ul>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Manage Deliveries</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">Payments</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>RESOURCES</h4>
+        <ul>
+          <li><a href="#">Free eBooks</a></li>
+          <li><a href="#">Development Tutorial</a></li>
+          <li><a href="#">How to - Blog</a></li>
+          <li><a href="#">Youtube Playlist</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>Shop.co © 2000-2026, All Rights Reserved</p>
+      <div class="footer__payments">
+        <span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span><span>G Pay</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Announcement bar close
+    document.querySelector('.announcement__close').addEventListener('click', (e) => {
+      e.target.closest('.announcement').style.display = 'none';
+    });
+
+    // Simple testimonial carousel scroll
+    const track = document.querySelector('.testimonials__track');
+    const arrows = document.querySelectorAll('.testimonials__arrows button');
+    if (track && arrows.length) {
+      arrows[0].addEventListener('click', () => track.scrollBy({ left: -320, behavior: 'smooth' }));
+      arrows[1].addEventListener('click', () => track.scrollBy({ left: 320, behavior: 'smooth' }));
+    }
+  </script>
+</body>
+</html>
