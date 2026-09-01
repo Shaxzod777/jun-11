@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOP.CO — One Life Graphic T-Shirt</title>
+<link rel="stylesheet" href="./css/product.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo">SHOP.CO</a>
+
+    <nav class="main-nav">
+      <a href="#">Shop <span class="chevron">▾</span></a>
+      <a href="#">On Sale</a>
+      <a href="#">New Arrivals</a>
+      <a href="#">Brands</a>
+    </nav>
+
+    <div class="search-bar">
+      <svg class="icon-search" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="text" placeholder="Search for products...">
+    </div>
+
+    <div class="header-icons">
+      <button class="icon-btn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 6h15l-1.5 9h-12L6 6Zm0 0L5 3H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1" fill="currentColor"/><circle cx="17" cy="20" r="1" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="#">Home</a> <span>/</span>
+      <a href="#">Shop</a> <span>/</span>
+      <a href="#">Men</a> <span>/</span>
+      <span class="current">T-shirts</span>
+    </nav>
+
+    <!-- ===================== PRODUCT SECTION ===================== -->
+    <section class="product">
+
+      <!-- Gallery -->
+      <div class="gallery">
+        <div class="thumbs">
+          <button class="thumb active" data-img="0"><img src="assets/product-1.jpg" alt="Thumbnail 1"></button>
+          <button class="thumb" data-img="1"><img src="assets/product-2.jpg" alt="Thumbnail 2"></button>
+          <button class="thumb" data-img="2"><img src="assets/product-3.jpg" alt="Thumbnail 3"></button>
+        </div>
+        <div class="main-image">
+          <img id="mainProductImage" src="assets/product-1.jpg" alt="One Life Graphic T-Shirt">
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="product-info">
+        <h1>ONE LIFE GRAPHIC T-SHIRT</h1>
+
+        <div class="rating">
+          <span class="stars">★★★★<span class="half">★</span></span>
+          <span class="rating-value">4.5/5</span>
+        </div>
+
+        <div class="price">
+          <span class="price-current">$260</span>
+          <span class="price-old">$300</span>
+          <span class="price-badge">-40%</span>
+        </div>
+
+        <p class="description">
+          This graphic t-shirt is perfect for any occasion. Crafted from a soft,
+          breathable fabric, it offers superior comfort and style.
+        </p>
+
+        <hr>
+
+        <div class="option-group">
+          <span class="option-label">Select Colors</span>
+          <div class="color-options">
+            <button class="color-swatch selected" style="background:#4f4633" aria-label="Olive"></button>
+            <button class="color-swatch" style="background:#314f4a" aria-label="Teal"></button>
+            <button class="color-swatch" style="background:#31344f" aria-label="Navy"></button>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="option-group">
+          <span class="option-label">Choose Size</span>
+          <div class="size-options">
+            <button class="size-pill">Small</button>
+            <button class="size-pill">Medium</button>
+            <button class="size-pill selected">Large</button>
+            <button class="size-pill">X-Large</button>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="purchase-row">
+          <div class="qty-selector">
+            <button id="qtyMinus" aria-label="Decrease quantity">−</button>
+            <span id="qtyValue">1</span>
+            <button id="qtyPlus" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="btn-primary" id="addToCartBtn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TABS ===================== -->
+    <section class="tabs-section">
+      <div class="tabs-nav">
+        <button class="tab-btn" data-tab="details">Product Details</button>
+        <button class="tab-btn active" data-tab="reviews">Rating &amp; Reviews</button>
+        <button class="tab-btn" data-tab="faq">FAQs</button>
+      </div>
+      <hr>
+
+      <div class="tab-panel" id="panel-details" hidden>
+        <p>Fabric: 100% combed cotton. Regular fit. Machine washable. Designed to
+        last with reinforced stitching along the seams and collar.</p>
+      </div>
+
+      <div class="tab-panel" id="panel-reviews">
+        <div class="reviews-header">
+          <h2>All Reviews <span class="review-count">(451)</span></h2>
+          <div class="reviews-actions">
+            <button class="icon-btn small" aria-label="Filter">⚙</button>
+            <select id="sortReviews">
+              <option>Latest</option>
+              <option>Oldest</option>
+              <option>Highest Rated</option>
+            </select>
+            <button class="btn-secondary small">Write a Review</button>
+          </div>
+        </div>
+
+        <div class="reviews-grid" id="reviewsGrid">
+          <!-- Review cards injected by JS -->
+        </div>
+
+        <div class="load-more-wrap">
+          <button class="btn-secondary" id="loadMoreBtn">Load More Reviews</button>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-faq" hidden>
+        <p>Common questions about sizing, shipping, and returns will appear here.</p>
+      </div>
+    </section>
+
+    <!-- ===================== YOU MIGHT ALSO LIKE ===================== -->
+    <section class="related">
+      <h2>YOU MIGHT ALSO LIKE</h2>
+      <div class="related-grid" id="relatedGrid">
+        <!-- Product cards injected by JS -->
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section class="newsletter">
+    <div class="container newsletter-inner">
+      <h2>STAY UPTO DATE ABOUT<br>OUR LATEST OFFERS</h2>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn-light">Subscribe to Newsletter</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <p class="logo">SHOP.CO</p>
+      <p>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+      <div class="socials">
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="GitHub">gh</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>COMPANY</h3>
+      <a href="#">About</a>
+      <a href="#">Features</a>
+      <a href="#">Works</a>
+      <a href="#">Career</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>HELP</h3>
+      <a href="#">Customer Support</a>
+      <a href="#">Delivery Details</a>
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>FAQ</h3>
+      <a href="#">Account</a>
+      <a href="#">Manage Deliveries</a>
+      <a href="#">Orders</a>
+      <a href="#">Payments</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>RESOURCES</h3>
+      <a href="#">Free eBooks</a>
+      <a href="#">Development Tutorial</a>
+      <a href="#">How to - Blog</a>
+      <a href="#">Youtube Playlist</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>Shop.co © 2000-2023, All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="./js/product.js"></script>
+</body>
+</html>
